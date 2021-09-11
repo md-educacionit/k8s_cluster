@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Local .terraform directories
 **/.terraform/*
 
@@ -32,3 +33,8 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+=======
+*.terraform
+.terraform.tfstate.lock.info
+.terraform.lock.hcl
+>>>>>>> 3eb9a1566b9a786dd974c32ed9b0ceb24fcc67e0
