@@ -17,14 +17,15 @@ provider "kubernetes" {
 module "my-cluster" {
   
   source          = "terraform-aws-modules/eks/aws"
-  cluster_name    = "my-cluster"
+  cluster_name    = "k8s"
   cluster_version = "1.17"
   subnets         = module.vpc.public_subnets
   vpc_id          = module.vpc.vpc_id
 
   worker_groups = [
     {
-      instance_type = "t3.small"
+      instance_type = "t3.micro"
+      asg_desired_capacity  = 4
       asg_max_size  = 5
     }
   ]
