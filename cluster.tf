@@ -26,16 +26,14 @@ module "my-cluster" {
   worker_groups = [
     {
       instance_type = "t2.micro"
-      asg_desired_capacity  = 4
+      asg_desired_capacity  = 5
       asg_max_size  = 5
     }
   ]
 }
 
 
-output "sg_id" {
-  value = module.my-cluster.worker_security_group_id
-}
+
 
 
 resource "aws_security_group_rule" "allow_all" {
